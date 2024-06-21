@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="content">
+    <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+      <div>
+        <input type="date" placeholder="hello" formControlName="date" />
+      </div>
+      <div>
+        <input type="number" placeholder="Adults" formControlName="adults" />
+      </div>
+      <div>
+        <input
+          type="number"
+          placeholder="Children"
+          formControlName="children"
+        />
+      </div>
+      <div>
+        <button type="submit">SEARCH</button>
+      </div>
+      <div>
+        @if (this.bookingForm.get('date')?.invalid &&
+        this.bookingForm.get('date')?.touched) {
+        <p class="error">Date is required</p>
+        }
+      </div>
+      <div class="error">
+        @if (this.bookingForm.get('adults')?.value < 1 &&
+        this.bookingForm.get('children')?.value < 1 &&
+        this.bookingForm.get('adults')?.touched) {
+        <p>Please select a valid number</p>
+        } @else if (this.bookingForm.get('adults')?.invalid &&
+        this.bookingForm.get('adults')?.touched) {
+        <p>Field is required</p>
+        }
+      </div>
+      <div class="error">
+        @if (this.bookingForm.get('children')?.value < 1 &&
+        this.bookingForm.get('adults')?.value < 1 &&
+        this.bookingForm.get('adults')?.touched) {
+        <p>Please select a valid number</p>
+        }
+      </div>
+    </form>
+  </div>
+</div>

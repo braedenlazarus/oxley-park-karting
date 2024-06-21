@@ -1,0 +1,31 @@
+<app-card>
+  <div class="image">
+    <img [src]="imgPath" [alt]="title" height="240px" width="300px" />
+  </div>
+  <div class="details">
+    <h3>{{ title }}</h3>
+    <p>{{ description }}</p>
+  </div>
+  <div class="confirmation">
+    <h3>AVAILABLE TIMES</h3>
+    <p>You <u>must</u> arrive 40 minutes before your Drive Time.</p>
+    <div class="time">
+      <button [ngClass]="{ clicked: isSelected }" (click)="selectTime()">
+        08:00
+      </button>
+      <button>08:15</button>
+      <button>08:30</button>
+      <button>09:40</button>
+      <button>09:55</button>
+      <button>13:05</button>
+      <button>15:15</button>
+      <button>16:25</button>
+      <button>18:20</button>
+      <button>19:50</button>
+      <button>20:05</button>
+      <button>20:20</button>
+    </div>
+    <p>{{ price | currency : "GBP" }}</p>
+    <button class="book" (click)="onBook()">Book</button>
+  </div>
+</app-card>

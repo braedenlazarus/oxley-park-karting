@@ -1,0 +1,91 @@
+.fallback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  padding: 1rem;
+  box-shadow: 0 0 10px 1px rgb(200, 200, 200);
+  border-radius: 4px;
+  width: 30%;
+  margin: 0;
+}
+
+.container > h2,
+p {
+  margin: 0;
+}
+
+.container > p {
+  padding: 0.25rem 0 1.5rem 0;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form div {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  width: 100%;
+  max-width: 25rem;
+}
+
+form > * {
+  padding: 1rem;
+}
+
+input {
+  padding: 1rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid grey;
+  font-size: medium;
+}
+
+input,
+.login-btn {
+  width: -webkit-fill-available;
+}
+
+.login-btn {
+  align-items: center;
+  border-radius: 25px;
+  color: white;
+  background-color: rgb(218, 41, 22);
+  border: none;
+  transition: 0.3s;
+  box-shadow: 0 0 3px 1px rgb(200, 200, 200);
+  font-weight: 1000;
+}
+.login-btn:hover {
+  cursor: pointer;
+  background-color: rgb(255, 100, 100);
+  transition: 0.2s;
+}
+.login-btn:active {
+  background-color: rgb(255, 150, 150);
+}
+
+.error {
+  color: darkred;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.switch-btn {
+  background-color: white;
+  border: none;
+  font-size: medium;
+  padding: 0;
+  font-style: u;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.switch-btn:active {
+  color: purple;
+}

@@ -1,0 +1,81 @@
+<div class="fallback">
+  <div class="container">
+    @if (isLoggedIn) {
+    <h2>Login</h2>
+    <p>Log in now and let's race to fun and excitement!</p>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <div class="form-control">
+        <input
+          type="email"
+          placeholder="Email Address"
+          formControlName="email"
+        />
+        @if (!loginForm.get('email')?.valid && loginForm.get('email')?.touched)
+        {
+        <p class="error">Please enter a valid email!</p>
+        }
+      </div>
+      <div class="form-control">
+        <input
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        />
+        @if (!loginForm.get('password')?.valid &&
+        loginForm.get('password')?.touched) {
+        <p class="error">Please enter a valid password! (5 Characters)</p>
+        }
+      </div>
+      <button class="login-btn" type="submit">Log In</button>
+      <p>
+        First time? Click
+        <button class="switch-btn" type="button" (click)="onSwitch()">
+          here
+        </button>
+        to sign up!
+      </p>
+      @if (!loginForm.valid && loginForm.touched) {
+      <p class="error">Please fill out all the fields correctly!</p>
+      }
+    </form>
+    } @else {
+    <h2>Sign up</h2>
+    <p>Sign up now and let's race to fun and excitement!</p>
+    <form [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
+      <div class="form-control">
+        <input
+          type="email"
+          placeholder="Email Address"
+          formControlName="email"
+        />
+        @if (!signUpForm.get('email')?.valid &&
+        signUpForm.get('email')?.touched) {
+        <p class="error">Please enter a valid email!</p>
+        }
+      </div>
+      <div class="form-control">
+        <input
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        />
+        @if (!signUpForm.get('password')?.valid &&
+        signUpForm.get('password')?.touched) {
+        <p class="error">Please enter a valid password! (5 Characters)</p>
+        }
+      </div>
+      <button class="login-btn" type="submit">Sign Up</button>
+      <p>
+        Already have an account? Click
+        <button class="switch-btn" type="button" (click)="onSwitch()">
+          here
+        </button>
+        to sign in!
+      </p>
+      @if (!signUpForm.valid && signUpForm.touched) {
+      <p class="error">Please fill out all the fields correctly!</p>
+      }
+    </form>
+    }
+  </div>
+</div>

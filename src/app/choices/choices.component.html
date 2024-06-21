@@ -1,0 +1,15 @@
+<app-header />
+<app-booking />
+<div class="placeholder"></div>
+<div class="banner">
+  <h1>RACE SEARCH RESULTS</h1>
+</div>
+@for (race of races; track race.raceId) {
+<app-races
+  [img]="race.img"
+  [title]="race.title"
+  [description]="race.description"
+  [price]="race.price"
+/>
+}
+<app-footer></app-footer>

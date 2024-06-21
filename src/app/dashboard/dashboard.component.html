@@ -1,0 +1,32 @@
+<app-header />
+<app-booking />
+<div class="placeholder"></div>
+<h1>CHECK YOUR LATEST LAP TIME!</h1>
+<section>
+  <img
+    src="../../assets/leaderboard.png"
+    alt="test"
+    width="620px"
+    height="210px"
+  />
+  <div class="content">
+    <h2>Calculator</h2>
+    <p>Click the button to check your latest lap time!</p>
+    <p>
+      Thanks to our sensors and machine learning algorithm data, we can provide
+      accurate, real time tracking of race results. Doing so we maximise it's
+      efficiency and ensure that we can display accurate results in 1000th of a
+      second.​
+    </p>
+    @if (clicked) {
+    <strong>{{ totalLapTimeSec | number }}s</strong>
+    <p>
+      That's {{ lapTimeMins | number : "1.0-0" }} minute and
+      {{ lapTimeSec | number : "1.0-0" }} seconds!
+    </p>
+    }
+    <button (click)="onClick()">
+      {{ !clicked ? "MOST RECENT!" : "SEE YOUR OTHER RESULTS!" }}
+    </button>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+.container {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  height: 110px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.red {
+  color: rgb(218, 41, 22);
+}
+
+ul {
+  list-style: none;
+  padding: 0 2rem;
+  margin: 0;
+}
+
+li,
+a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 20px;
+}

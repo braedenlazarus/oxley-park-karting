@@ -1,0 +1,28 @@
+.placeholder {
+  height: 210px;
+}
+
+.banner {
+  height: 5vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner > h1 {
+  color: orange;
+}
+
+.temp-card {
+  border: 1px black solid;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.temp-card > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
