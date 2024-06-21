@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Therfore, you will need both Node.js and AngularCLI as a prerequisite to run this application locally.
 
-[Node download](https://nodejs.org/en) -> open up the terminal and run `npm install -g @angular.cli` (prefix this with the `sudo` command if on macOs)
+[Node download](https://nodejs.org/en) -> open up the terminal and run `npm install -g @angular/cli` (prefix this with the `sudo` command if on macOs)
 
 Now you have access to all the angular specific commands `ng` outlined below! 
 
